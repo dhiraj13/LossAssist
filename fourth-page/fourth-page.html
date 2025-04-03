@@ -6,7 +6,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
       name="viewport"
     />
-    <title>Users List - LossAssist</title>
+    <title>CompanyList List - LossAssist</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link
       rel="stylesheet"
@@ -463,7 +463,7 @@
                     <input
                       name="__RequestVerificationToken"
                       type="hidden"
-                      value="CfDJ8OSfbkMjR-5FovD0rMlO4W9GrK0eDjXWwkQ1tUvaTwOlUECu-GZ84UB7wZHdxoF4ePPbgsIXRZ6W103TQDTHR-l5H5EsX7AD5hefzNnFzSn48f-NKb_GtGY9tzDf4-HluXaVoYGy9eu3A4susFPSkdlC9BWDbPdy6S3hFD5-k_iNwlzZmuLowinVShcB3wW_kA"
+                      value="CfDJ8OSfbkMjR-5FovD0rMlO4W9o1OnsyngvfWSMnHcbIo1uKRcfxteJBnwtavErtBpYcZN41UHtOtlCKaTJTU4CX6me9vPvnwAOubQr6w-Ckt3L8lVHCOpVC6NULxMzdiL-Wl83zoSQfoae5RAcB2vNo5--6lUQ46bWCmw4J4VD7T-Mx-ZXRhlTCbfTpLxWlYZCVw"
                     />
                   </form>
                 </div>
@@ -867,7 +867,7 @@
         <div b-zj7qz69uze class="main-content">
           <section b-zj7qz69uze class="section">
             <div b-zj7qz69uze class="section-header">
-              <h1 b-zj7qz69uze>Users List</h1>
+              <h1 b-zj7qz69uze>CompanyList List</h1>
               <div b-zj7qz69uze class="section-header-breadcrumb">
                 <div b-zj7qz69uze class="breadcrumb-item active">
                   <a b-zj7qz69uze href="#">Dashboard</a>
@@ -875,11 +875,16 @@
                 <div b-zj7qz69uze class="breadcrumb-item">
                   <a b-zj7qz69uze href="#">Components</a>
                 </div>
-                <div b-zj7qz69uze class="breadcrumb-item">Users List</div>
+                <div b-zj7qz69uze class="breadcrumb-item">CompanyList List</div>
               </div>
             </div>
             <div b-zj7qz69uze class="section-body">
-              <h4 style="margin-top: 5px">Users List</h4>
+              <a
+                class="btn btn-primary"
+                onclick="fetchForm(event)"
+                href="/Admin/Company/Upsert"
+                >Create</a
+              >
 
               <div class="card p-4 m-2">
                 <div
@@ -931,7 +936,7 @@
                     </select>
                   </div>
 
-                  <div class="col-2" style="margin-top: 32px">
+                  <div class="col-3" style="margin-top: 32px">
                     <button class="btn btn-primary" id="btnFilter">
                       Filter
                     </button>
@@ -949,190 +954,27 @@
                 <thead>
                   <tr>
                     <th>S.No.</th>
+                    <th>Logo</th>
                     <th>Name</th>
-                    <th>PhoneNumber</th>
-                    <th>Email</th>
-                    <th>City</th>
-                    <th>Company Name</th>
-                    <th>Profile</th>
-                    <th>Account Status</th>
-                    <th>Is Master</th>
-                    <th>Details</th>
+                    <th>Address</th>
+                    <th>Director</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Branch No</th>
+                    <th>User Count</th>
+                    <th>Action</th>
+                    <th hidden>Id</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr id="row-e78115ec-9df8-447b-8151-407be46661a8" role="row" class="odd">
-                    <td class="dt-center sorting_1" style="text-align: center; vertical-align: middle;">1</td>
-                    <td style="text-align: center; vertical-align: middle;">Test Two</td>
-                    <td style="text-align: center; vertical-align: middle;">656565</td>
-                    <td style="text-align: center; vertical-align: middle;">testtwo@test.com</td>
-                    <td style="text-align: center; vertical-align: middle;">Not Available</td>
-                    <td style="text-align: center; vertical-align: middle;">Another Company</td>
-                    <td style="text-align: center; vertical-align: middle;">Company</td>
-                    <td style="text-align: center; vertical-align: middle;">Active</td>
-                    <td style="text-align: center; vertical-align: middle;">No</td>
-                    <td style="text-align: center; vertical-align: middle;">
-                      <div class="dropdown dropleft">
-                        <a style="font-size: 20px;" data-toggle="dropdown" href="javascript:void(0)" aria-haspopup="true"
-                          aria-expanded="false">
-                          <i class="ion ion-ios-settings-strong"></i>
-                        </a>
-                        <div class="dropdown-menu dropleft"
-                          style="width: 30px; position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-142.067px, 1px, 0px);"
-                          x-placement="left-start">
-                          <a class="dropdown-item has-icon"
-                            href="/Admin/User/UpdateUserProfile/?id=e78115ec-9df8-447b-8151-407be46661a8" onclick="fetchForm(event)">
-                            <i class="ion ion-edit"></i> Edit
-                          </a>
-                          <a class="dropdown-item has-icon" href="/Admin/User/Detail/e78115ec-9df8-447b-8151-407be46661a8"
-                            onclick="fetchForm(event)">
-                            <i class="ion ion-information-circled"></i> Detail
-                          </a>
-                          <a class="dropdown-item has-icon"
-                            href="/Admin/User/AssignBaseAccount/?id=e78115ec-9df8-447b-8151-407be46661a8" onclick="fetchForm(event)">
-                            <i class="ion ion-ios-home"></i> Base Account
-                          </a>
-                
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr id="row-9d848a5a-4304-4648-9ffb-4afb54fc6395" role="row" class="even">
-                    <td class="dt-center sorting_1" style="text-align: center; vertical-align: middle;">2</td>
-                    <td style="text-align: center; vertical-align: middle;">Test One</td>
-                    <td style="text-align: center; vertical-align: middle;">65656</td>
-                    <td style="text-align: center; vertical-align: middle;">test1@test.com</td>
-                    <td style="text-align: center; vertical-align: middle;">Not Available</td>
-                    <td style="text-align: center; vertical-align: middle;">Another Company</td>
-                    <td style="text-align: center; vertical-align: middle;">Company</td>
-                    <td style="text-align: center; vertical-align: middle;">Active</td>
-                    <td style="text-align: center; vertical-align: middle;">Yes</td>
-                    <td style="text-align: center; vertical-align: middle;">
-                      <div class="dropdown dropleft">
-                        <a style="font-size: 20px;" data-toggle="dropdown" href="javascript:void(0)" aria-haspopup="true"
-                          aria-expanded="false">
-                          <i class="ion ion-ios-settings-strong"></i>
-                        </a>
-                        <div class="dropdown-menu dropleft" style="width: 30px;">
-                          <a class="dropdown-item has-icon"
-                            href="/Admin/User/UpdateUserProfile/?id=9d848a5a-4304-4648-9ffb-4afb54fc6395" onclick="fetchForm(event)">
-                            <i class="ion ion-edit"></i> Edit
-                          </a>
-                          <a class="dropdown-item has-icon" href="/Admin/User/Detail/9d848a5a-4304-4648-9ffb-4afb54fc6395"
-                            onclick="fetchForm(event)">
-                            <i class="ion ion-information-circled"></i> Detail
-                          </a>
-                          <a class="dropdown-item has-icon"
-                            href="/Admin/User/AssignBaseAccount/?id=9d848a5a-4304-4648-9ffb-4afb54fc6395" onclick="fetchForm(event)">
-                            <i class="ion ion-ios-home"></i> Base Account
-                          </a>
-                
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr id="row-ca35f717-0700-4ea3-bdcf-c257cbbb32e7" role="row" class="odd">
-                    <td class="dt-center sorting_1" style="text-align: center; vertical-align: middle;">3</td>
-                    <td style="text-align: center; vertical-align: middle;"><b>Admin Saab</b></td>
-                    <td style="text-align: center; vertical-align: middle;">55555555</td>
-                    <td style="text-align: center; vertical-align: middle;">admin@admin.com</td>
-                    <td style="text-align: center; vertical-align: middle;">Not Available</td>
-                    <td style="text-align: center; vertical-align: middle;">Not Available</td>
-                    <td style="text-align: center; vertical-align: middle;">Individual</td>
-                    <td style="text-align: center; vertical-align: middle;">Active</td>
-                    <td style="text-align: center; vertical-align: middle;">No</td>
-                    <td style="text-align: center; vertical-align: middle;">
-                      <div class="dropdown dropleft">
-                        <a style="font-size: 20px;" data-toggle="dropdown" href="javascript:void(0)" aria-haspopup="true"
-                          aria-expanded="false">
-                          <i class="ion ion-ios-settings-strong"></i>
-                        </a>
-                        <div class="dropdown-menu dropleft" style="width: 30px;">
-                          <a class="dropdown-item has-icon"
-                            href="/Admin/User/UpdateUserProfile/?id=ca35f717-0700-4ea3-bdcf-c257cbbb32e7" onclick="fetchForm(event)">
-                            <i class="ion ion-edit"></i> Edit
-                          </a>
-                          <a class="dropdown-item has-icon" href="/Admin/User/Detail/ca35f717-0700-4ea3-bdcf-c257cbbb32e7"
-                            onclick="fetchForm(event)">
-                            <i class="ion ion-information-circled"></i> Detail
-                          </a>
-                          <a class="dropdown-item has-icon"
-                            href="/Admin/User/AssignBaseAccount/?id=ca35f717-0700-4ea3-bdcf-c257cbbb32e7" onclick="fetchForm(event)">
-                            <i class="ion ion-ios-home"></i> Base Account
-                          </a>
-                
-                
-                          <a class="dropdown-item has-icon" href="/Admin/User/AssignCompany/?id=ca35f717-0700-4ea3-bdcf-c257cbbb32e7"
-                            onclick="fetchForm(event)">
-                            <i class="ion ion-android-contacts"></i> Company
-                          </a>
-                
-                
-                          <a class="dropdown-item has-icon" href="/Admin/User/AssignRole/?id=ca35f717-0700-4ea3-bdcf-c257cbbb32e7"
-                            onclick="fetchForm(event)">
-                            <i class="ion ion-ios-people"></i> Assign Role
-                          </a>
-                
-                
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr id="row-08714651-ea51-4af0-a2c6-40b2d2abcf01" role="row" class="even">
-                    <td class="dt-center sorting_1" style="text-align: center; vertical-align: middle;">4</td>
-                    <td style="text-align: center; vertical-align: middle;"><b>Sangam Dhakal</b></td>
-                    <td style="text-align: center; vertical-align: middle;">123456789</td>
-                    <td style="text-align: center; vertical-align: middle;">songgum.dh@gmail.com</td>
-                    <td style="text-align: center; vertical-align: middle;">Pokhaa</td>
-                    <td style="text-align: center; vertical-align: middle;">Another Company</td>
-                    <td style="text-align: center; vertical-align: middle;">Company</td>
-                    <td style="text-align: center; vertical-align: middle;">Active</td>
-                    <td style="text-align: center; vertical-align: middle;">Yes</td>
-                    <td style="text-align: center; vertical-align: middle;">
-                      <div class="dropdown dropleft">
-                        <a style="font-size: 20px;" data-toggle="dropdown" href="javascript:void(0)" aria-haspopup="true"
-                          aria-expanded="false">
-                          <i class="ion ion-ios-settings-strong"></i>
-                        </a>
-                        <div class="dropdown-menu dropleft" style="width: 30px;">
-                          <a class="dropdown-item has-icon"
-                            href="/Admin/User/UpdateUserProfile/?id=08714651-ea51-4af0-a2c6-40b2d2abcf01" onclick="fetchForm(event)">
-                            <i class="ion ion-edit"></i> Edit
-                          </a>
-                          <a class="dropdown-item has-icon" href="/Admin/User/Detail/08714651-ea51-4af0-a2c6-40b2d2abcf01"
-                            onclick="fetchForm(event)">
-                            <i class="ion ion-information-circled"></i> Detail
-                          </a>
-                          <a class="dropdown-item has-icon"
-                            href="/Admin/User/AssignBaseAccount/?id=08714651-ea51-4af0-a2c6-40b2d2abcf01" onclick="fetchForm(event)">
-                            <i class="ion ion-ios-home"></i> Base Account
-                          </a>
-                
-                
-                          <a class="dropdown-item has-icon" href="/Admin/User/AssignCompany/?id=08714651-ea51-4af0-a2c6-40b2d2abcf01"
-                            onclick="fetchForm(event)">
-                            <i class="ion ion-android-contacts"></i> Company
-                          </a>
-                
-                
-                          <a class="dropdown-item has-icon" href="/Admin/User/AssignRole/?id=08714651-ea51-4af0-a2c6-40b2d2abcf01"
-                            onclick="fetchForm(event)">
-                            <i class="ion ion-ios-people"></i> Assign Role
-                          </a>
-                
-                
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
               </table>
             </div>
           </section>
         </div>
 
-        <div data-include="user-detail-modal.html"></div>
-        
+        <!-- Modal Start -->
+        <div data-include="company-detail-modal.html"></div>
+        <!-- Modal End -->
+
         <footer class="main-footer">
           <div class="footer-left">
             &copy; 2025 - LossAssist -
@@ -1142,7 +984,6 @@
         </footer>
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
     <script
@@ -1232,18 +1073,17 @@
       });
     </script>
 
-    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-
-    <script src="/js/areas/admin/user/userslist.js"></script>
+    <script src="/js/areas/admin/company/companylist.js"></script>
     <script>
       $(document).ready(function () {
-        loadDataTable({
-          Profile: null,
-          AccountStatus: $("#AccountStatus").val(),
-          IsMaster: null,
-          Roles: $("#Roles").val(),
-        });
+        // loadDataTable({
+        //     "Profile": null,
+        //     "AccountStatus": $("#AccountStatus").val(),
+        //     "IsMaster": null,
+        //     "RelatedId": null
+        // });
+
+        loadDataTable();
 
         $("#btnFilter").on("click", function () {
           if ($.fn.DataTable.isDataTable("#tblData")) {
@@ -1253,39 +1093,10 @@
             Profile: $("#Profile").val(),
             AccountStatus: $("#AccountStatus").val(),
             IsMaster: $("#IsMaster").val(),
-            Roles: $("#Roles").val(),
+            RelatedId: null,
           });
         });
       });
-
-      $(document).on("shown.bs.modal", "#popupContainer", function () {
-        function toggleMasterAcntList() {
-          var apple = $("#CanChangeBaseAccount").is(":checked");
-          if (!apple) {
-            $(".disableProp").prop("disabled", true);
-          }
-          if ($("#IsBaseYes").is(":checked")) {
-            $(".disableBase").prop("disabled", true);
-          } else {
-            $(".disableBase").prop("disabled", false);
-          }
-        }
-
-        toggleMasterAcntList();
-
-        $('input[name="IsBaseAccount"]')
-          .off("change")
-          .on("change", function () {
-            toggleMasterAcntList();
-          });
-      });
-
-      //         function fetchUserForm(event) {
-      //     fetchForm(event, function () {
-      //                 reinitializeValidation();
-      //     });
-      // }
-
     </script>
   </body>
 </html>

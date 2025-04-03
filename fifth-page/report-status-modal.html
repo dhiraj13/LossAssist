@@ -1,0 +1,287 @@
+<div
+  class="modal fade show"
+  id="popupContainer"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="statusUpdateModal"
+  style="display: block"
+  aria-modal="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Update Report Status of OD_TP_TP2</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          id="closeModalPopup"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form
+          method="post"
+          action="/Common/ReportStatus/Insert"
+          novalidate="novalidate"
+        >
+          <!-- Current Status Display with dynamic background color based on status -->
+          <div class="card mb-4 border-0 bg-success text-white">
+            <div class="card-body text-center py-4">
+              <h4 class="mb-1">Pending</h4>
+              <p class="mb-1">The project initiated.</p>
+              <small>03/16/2025</small>
+            </div>
+          </div>
+
+          <input
+            hidden
+            type="number"
+            data-val="true"
+            data-val-required="The CaseRecordId field is required."
+            id="CaseRecordId"
+            name="CaseRecordId"
+            value="5"
+          />
+          <input name="__Invariant" type="hidden" value="CaseRecordId" />
+          <input
+            type="hidden"
+            id="currentStatus"
+            value="0"
+          /><!-- Hidden field to store current status -->
+
+          <!-- Status Selection Row -->
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="Status" class="font-weight-bold">Status</label>
+              <select class="form-control" id="Status" name="Status">
+                <option selected value="0">Pend</option>
+                <option value="1">Finish</option>
+                <option value="2">Submit</option>
+                <option value="3">Paid</option>
+                <option value="4">Reopen</option>
+                <option value="5">Progress</option>
+                <option value="6">Info</option>
+                <option value="7">Cancel</option>
+                <option value="8">Delete</option>
+              </select>
+              <span
+                class="text-danger field-validation-valid"
+                data-valmsg-for="Status"
+                data-valmsg-replace="true"
+              ></span>
+            </div>
+
+            <!-- Date Checkbox -->
+            <div class="form-group col-md-6">
+              <label class="font-weight-bold d-block mb-3"
+                >Date of Revise</label
+              >
+              <div class="custom-control custom-switch">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="todayDateCheckBox"
+                />
+                <label class="custom-control-label" for="todayDateCheckBox"
+                  >Use Today's Date</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Date Selection Row -->
+          <div class="row" id="dateSelectionRow">
+            <div class="form-group col-12">
+              <label class="font-weight-bold">Select Date</label>
+              <div class="d-flex">
+                <input
+                  class="nepali-datepicker form-control mr-2"
+                  placeholder="BS (YYYY/MM/DD)"
+                  id="nepaliDateField"
+                  autocomplete="off"
+                />
+                <input
+                  class="English-datepicker form-control"
+                  placeholder="AD (DD/MM/YYYY)"
+                  id="DateOfSurveyAD"
+                  autocomplete="off"
+                  type="text"
+                  data-val="true"
+                  data-val-required="The DisplayDate field is required."
+                  name="DisplayDate"
+                  value="03/16/2025"
+                  readonly
+                />
+              </div>
+              <span
+                class="text-danger field-validation-valid"
+                data-valmsg-for="DisplayDate"
+                data-valmsg-replace="true"
+              ></span>
+            </div>
+          </div>
+
+          <!-- Remarks Row -->
+          <div class="row">
+            <div class="form-group col-12">
+              <label for="Remarks" class="font-weight-bold">Remarks</label>
+              <textarea
+                class="form-control"
+                id="Remarks"
+                name="Remarks"
+                style="height: 8rem;"
+              ></textarea>
+              <span
+                class="text-danger field-validation-valid"
+                data-valmsg-for="Status"
+                data-valmsg-replace="true"
+              ></span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end mt-4">
+            <button
+              type="button"
+              class="btn btn-secondary mr-2"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-primary"
+              onclick="submitChangeStatus(this.form)"
+            >
+              Save Changes
+            </button>
+          </div>
+
+          <input
+            name="__RequestVerificationToken"
+            type="hidden"
+            value="CfDJ8OSfbkMjR-5FovD0rMlO4W_CDwcI913ifGMfd0sYVvHZApDnZCsnGpoEIDR4BVAbvr7SatsZGLWS4PMmIbwSSErdnmhS_5s-_HtBwhi6sOSgoK-Gy3Z0N9GymR4a1WyiIjBz_IFnlitrcQxRApp6G1dL0YowYt1mrH9ON7Nuk3fpBVvjnnBu7qxaWSl_yu8pww"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Function to update date fields based on checkbox state
+  document.addEventListener("DOMContentLoaded", function () {
+    const todayCheckbox = document.getElementById("todayDateCheckBox");
+    const dateSelectionRow = document.getElementById("dateSelectionRow");
+    const nepaliDateField = document.getElementById("nepaliDateField");
+    const adDateField = document.getElementById("DateOfSurveyAD");
+    const statusSelect = document.getElementById("Status");
+    const statusCard = document.querySelector(".card.mb-4");
+    const currentStatus = document.getElementById("currentStatus").value;
+
+    // Status color mapping
+    const statusColors = {
+      0: "bg-success", // Pend - Green
+      1: "bg-info", // Finish - Blue
+      2: "bg-primary", // Submit - Primary blue
+      3: "bg-warning", // Paid - Yellow/Orange
+      4: "bg-secondary", // Reopen - Gray
+      5: "bg-info", // Progress - Light blue
+      6: "bg-dark", // Info - Dark
+      7: "bg-danger", // Cancel - Red
+      8: "bg-dark", // Delete - Dark
+    };
+
+    // Status text mapping
+    const statusText = {
+      0: "Pending",
+      1: "Finished",
+      2: "Submitted",
+      3: "Paid",
+      4: "Reopened",
+      5: "In Progress",
+      6: "Info Required",
+      7: "Cancelled",
+      8: "Deleted",
+    };
+
+    // Set the initial status color
+    function setInitialStatusColor() {
+      // Remove any existing background classes
+      statusCard.classList.remove(
+        "bg-success",
+        "bg-info",
+        "bg-primary",
+        "bg-warning",
+        "bg-secondary",
+        "bg-dark",
+        "bg-danger"
+      );
+      // Add the appropriate background class
+      statusCard.classList.add(statusColors[currentStatus]);
+    }
+
+    // Call this on page load
+    setInitialStatusColor();
+
+    // Set today's date in the correct format for both fields
+    function setTodayDate() {
+      const today = new Date();
+      const adFormatted =
+        (today.getDate() < 10 ? "0" + today.getDate() : today.getDate()) +
+        "/" +
+        (today.getMonth() + 1 < 10
+          ? "0" + (today.getMonth() + 1)
+          : today.getMonth() + 1) +
+        "/" +
+        today.getFullYear();
+
+      // This is a placeholder for BS date - in real implementation, you'd need a conversion function
+      const bsFormatted = "2081/01/15"; // Example placeholder BS date
+
+      nepaliDateField.value = bsFormatted;
+      adDateField.value = adFormatted;
+    }
+
+    // Handle checkbox change
+    todayCheckbox.addEventListener("change", function () {
+      if (this.checked) {
+        // Set today's date and disable fields
+        setTodayDate();
+        nepaliDateField.disabled = true;
+        adDateField.disabled = true;
+      } else {
+        // Clear and enable fields
+        nepaliDateField.disabled = false;
+        adDateField.disabled = false;
+      }
+    });
+
+    // Handle BS date changes to update AD date
+    nepaliDateField.addEventListener("change", function () {
+      // This is a placeholder - in real implementation, you'd convert BS to AD
+      // For now, we'll just set a placeholder value
+      adDateField.value = "03/16/2025"; // Example placeholder AD date
+    });
+
+    // Show the user how the status card would look with different statuses
+    statusSelect.addEventListener("change", function () {
+      const selectedStatus = this.value;
+      // Remove any existing background classes
+      statusCard.classList.remove(
+        "bg-success",
+        "bg-info",
+        "bg-primary",
+        "bg-warning",
+        "bg-secondary",
+        "bg-dark",
+        "bg-danger"
+      );
+      // Add the new background class
+      statusCard.classList.add(statusColors[selectedStatus]);
+      // Update the status text
+      statusCard.querySelector("h4").textContent = statusText[selectedStatus];
+    });
+  });
+</script>

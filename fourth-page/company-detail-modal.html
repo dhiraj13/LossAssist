@@ -1,0 +1,598 @@
+<div
+  class="modal fade show"
+  id="popupContainer"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  style="padding-right: 15px; display: block"
+  aria-modal="true"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100">Company Details</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          id="closeModalPopup"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <form
+            method="post"
+            enctype="multipart/form-data"
+            action="/Admin/Company/Upsert/9"
+          >
+            <div class="card">
+              <div class="card-header">
+                <h4>Company Details</h4>
+              </div>
+
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="CompanyName">CompanyName</label>
+                    <input
+                      class="text-capitalize form-control"
+                      type="text"
+                      id="CompanyName"
+                      name="CompanyName"
+                      value="Another Company"
+                      disabled
+                    />
+                    <div
+                      style="
+                        position: relative !important;
+                        height: 0px !important;
+                        width: 0px !important;
+                        float: left !important;
+                      "
+                      data-lastpass-icon-root=""
+                    ></div>
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="CompanyName"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="Address">Address</label>
+                    <input
+                      class="text-capitalize form-control"
+                      type="text"
+                      id="Address"
+                      name="Address"
+                      value="Unit 2 41 The Avenue"
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="Address"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="CreatedDate">CreatedDate</label>
+                    <input
+                      class="English-datepicker form-control"
+                      type="text"
+                      id="CreatedDate"
+                      name="CreatedDate"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="CreatedDate"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="UpdatedDate">UpdatedDate</label>
+                    <input
+                      class="English-datepicker form-control"
+                      type="text"
+                      id="UpdatedDate"
+                      name="UpdatedDate"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="UpdatedDate"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="PhoneNumber">PhoneNumber</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fas fa-phone"></i>
+                        </div>
+                      </div>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="PhoneNumber"
+                        name="PhoneNumber"
+                        value="0416768171"
+                        disabled
+                      />
+                      <span
+                        class="text-danger field-validation-valid"
+                        data-valmsg-for="PhoneNumber"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="CompanyEmail">CompanyEmail</label>
+                    <input
+                      class="text-lowercase form-control"
+                      type="text"
+                      id="CompanyEmail"
+                      name="CompanyEmail"
+                      value="songgum.dh@gmail.com"
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="CompanyEmail"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4>Representative Details</h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="MangingDirector">MangingDirector</label>
+                    <a
+                      class="ion ion-ios-copy"
+                      style="font-size: 15px"
+                      id="contactBtn"
+                      title="Click to copy from Insured Name, Double-click to copy from Account Name"
+                    ></a>
+                     
+                    <input
+                      class="form-control text-capitalize"
+                      type="text"
+                      id="MangingDirector"
+                      name="MangingDirector"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="MangingDirector"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="DirectorNumber">DirectorNumber</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fas fa-phone"></i>
+                        </div>
+                      </div>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="DirectorNumber"
+                        name="DirectorNumber"
+                        value=""
+                        disabled
+                      />
+                      <span
+                        class="text-danger field-validation-valid"
+                        data-valmsg-for="DirectorNumber"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="DirectorEmail">DirectorEmail</label>
+                    <input
+                      class="text-lowercase form-control"
+                      type="text"
+                      id="DirectorEmail"
+                      name="DirectorEmail"
+                      value="songgum.dh@gmail.com"
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="DirectorEmail"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="ContactPerson">ContactPerson</label>
+                    <a
+                      class="ion ion-ios-copy"
+                      style="font-size: 15px"
+                      id="contactBtn"
+                      title="Click to copy from Insured Name, Double-click to copy from Account Name"
+                    ></a>
+                     
+                    <input
+                      class="form-control text-capitalize"
+                      type="text"
+                      id="ContactPerson"
+                      name="ContactPerson"
+                      value="Sangam Dhakal"
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="ContactPerson"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="ContactPersonNumber">ContactPersonNumber</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fas fa-phone"></i>
+                        </div>
+                      </div>
+                      <input
+                        class="form-control"
+                        type="number"
+                        id="ContactPersonNumber"
+                        name="ContactPersonNumber"
+                        value=""
+                        disabled
+                      /><input
+                        name="__Invariant"
+                        type="hidden"
+                        value="ContactPersonNumber"
+                        disabled
+                      />
+                      <span
+                        class="text-danger field-validation-valid"
+                        data-valmsg-for="ContactPersonNumber"
+                        data-valmsg-replace="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="ContactPersonEmail">ContactPersonEmail</label>
+                    <input
+                      class="text-lowercase form-control"
+                      type="text"
+                      id="ContactPersonEmail"
+                      name="ContactPersonEmail"
+                      value="songgum.dh@gmail.com"
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="ContactPersonEmail"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4>Company Profile</h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="EmployeeNumber">EmployeeNumber</label>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="EmployeeNumber"
+                      name="EmployeeNumber"
+                      value=""
+                      disabled
+                    /><input
+                      name="__Invariant"
+                      type="hidden"
+                      value="EmployeeNumber"
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="EmployeeNumber"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="RegistrationNumber">RegistrationNumber</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="RegistrationNumber"
+                      name="RegistrationNumber"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="RegistrationNumber"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="TypeOfCompany">TypeOfCompany</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="TypeOfCompany"
+                      name="TypeOfCompany"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="TypeOfCompany"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="NoOfBranch">NoOfBranch</label>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="NoOfBranch"
+                      name="NoOfBranch"
+                      value=""
+                      disabled
+                    /><input
+                      name="__Invariant"
+                      type="hidden"
+                      value="NoOfBranch"
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="NoOfBranch"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="BranchLocation">BranchLocation</label>
+                    <input
+                      class="text-capitalize form-control"
+                      type="text"
+                      id="BranchLocation"
+                      name="BranchLocation"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="BranchLocation"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4>License Information</h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="form-group col-md-4 col-12">
+                    <label for="LicenseCategory">LicenseCategory</label>
+                    <select
+                      class="form-control selectric"
+                      id="LicenseCategory"
+                      name="LicenseCategory"
+                      disabled
+                    >
+                      <option disabled="" selected="">
+                        -- Select Category --
+                      </option>
+                      <option value="0">A</option>
+                      <option value="1">B</option>
+                      <option value="2">C</option>
+                      <option value="3">D</option>
+                    </select>
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="LicenseCategory"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="LicenseNo">LicenseNo</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="LicenseNo"
+                      name="LicenseNo"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="LicenseNo"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="LicenseIssueDate">LicenseIssueDate</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="LicenseIssueDate"
+                      name="LicenseIssueDate"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="LicenseIssueDate"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="LicenseUpdatedDate">LicenseUpdatedDate</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="LicenseUpdatedDate"
+                      name="LicenseUpdatedDate"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="LicenseUpdatedDate"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="IsActive">IsActive</label>
+                       
+                    <div style="margin-top: 1px">
+                      <div
+                        class="custom-control custom-radio custom-control-inline"
+                      >
+                        <input
+                          type="radio"
+                          value="false"
+                          class="custom-control-input"
+                          id="IsActiveNo"
+                          checked="checked"
+                          data-val="true"
+                          data-val-required="The IsActive field is required."
+                          name="IsActive"
+                          disabled
+                        />
+                        <label class="custom-control-label" for="IsActiveNo"
+                          >No</label
+                        >
+                      </div>
+                      <div
+                        class="custom-control custom-radio custom-control-inline"
+                      >
+                        <input
+                          type="radio"
+                          value="true"
+                          class="custom-control-input"
+                          id="IsActiveYes"
+                          name="IsActive"
+                          disabled
+                        />
+                        <label class="custom-control-label" for="IsActiveYes"
+                          >Yes</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4>Other Info</h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4 col-12">
+                    <label for="Website">Website</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="Website"
+                      name="Website"
+                      value=""
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="Website"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-4 col-12">
+                    <label for="LogoUrl">LogoUrl</label>
+                    <input
+                      type="file"
+                      name="file"
+                      id="uploadBox"
+                      accept=".jpg,.jpeg,.png"
+                      style="padding-top: 6px"
+                      class="form-control"
+                      disabled
+                    />
+                    <span
+                      class="text-danger field-validation-valid"
+                      data-valmsg-for="LogoUrl"
+                      data-valmsg-replace="true"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-right">
+              <button class="btn btn-primary" onclick="submitForm(form)">
+                Save
+              </button>
+            </div>
+            <input
+              name="__RequestVerificationToken"
+              type="hidden"
+              value="CfDJ8OSfbkMjR-5FovD0rMlO4W_yJgpACTXV54al4GPEcJQa4PtfQTr0NxUs12YDDeJvkyZ_a4LOAduMC6jrBzk1lBvmhHnPVEzVzVqUpzHtZ2WaL-PYoqi3hCDGIKwfJj3HQkIUD6n2z4xlLPM75x9yA6zLAThmZyLTNA1m12_DJBPkD_3WTfYWi_JCFpSDWWHyTQ"
+            />
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="text-right"
+        style="position: relative; left: -120px; top: -60px"
+      >
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
