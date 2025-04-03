@@ -1,0 +1,20 @@
+/* For all disabled select elements */
+select.form-control:disabled:hover {
+  background-color: #e9ecef !important; /* Bootstrap's default disabled bg color */
+  color: #495057 !important; /* Bootstrap's default disabled text color */
+  border-color: #ced4da !important; /* Bootstrap's default border color */
+}
+
+/* Specifically for selectric-styled selects if you're using that plugin */
+.selectric-disabled:hover .selectric {
+  background: #e9ecef !important;
+  border-color: #ced4da !important;
+}
+
+/* For disabled inputs in general */
+input:disabled:hover, 
+input[disabled]:hover {
+  background-color: #e9ecef !important;
+  color: #495057 !important;
+  border-color: #ced4da !important;
+}
