@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport" />
+  <title>Task - LossAssist</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="/css/site.css?v=Z_aUg1aMn6x9kkcxbB55Qs6KVbRObzJyfMMSf7JFYGE" />
+  <link rel="stylesheet" href="/WebUI.styles.css?v=hHcMRZbJV224avno57CqZugH9lYSEtcvibUlIz4Uk34" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+  <link href="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/css/sistila/jqvmap.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/css/sistila/owltheme.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+    integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css"
+    integrity="sha512-JApjWRnfonFeGBY7t4yq8SWr1A6xVYEJgO/UMIYONxaR3C9GETKUg0LharbJncEzJF5Nmiv+Pr5QNulr81LjGQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/css/sistila/datatables.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/css/sistila/datatablesselect.css"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/css/sistila/selectric.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/css/sistila/select2.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/css/sistila/componenets.css"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/css/sistila/daterangepicker.css"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/css/sistila/style.css" rel="stylesheet" />
+
+  <link href="/lib/nepalidate/css/nepali.datepicker.v4.0.1.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.7.1/bootstrap-tagsinput.css"
+    integrity="sha512-3uVpgbpX33N/XhyD3eWlOgFVAraGn3AfpxywfOTEQeBDByJ/J7HkLvl4mJE1fvArGh4ye1EiPfSBnJo2fgfZmg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div b-eh7gjq0slz id="app">
+    <div b-eh7gjq0slz class="main-wrapper">
+      <div b-eh7gjq0slz class="navbar-bg"></div>
+
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li>
+              <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a>
+            </li>
+            <li>
+              <a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a>
+            </li>
+          </ul>
+          <div class="search-element">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250" />
+            <button class="btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+            <div class="search-backdrop"></div>
+            <div class="search-result">
+              <div class="search-header">Histories</div>
+              <div class="search-item">
+                <a href="#">How to hack NASA using CSS</a>
+                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+              </div>
+              <div class="search-item">
+                <a href="#">Kodinger.com</a>
+                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+              </div>
+              <div class="search-item">
+                <a href="#">#Stisla</a>
+                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+              </div>
+              <div class="search-header">Result</div>
+              <div class="search-item">
+                <a href="#">
+                  <img class="mr-3 rounded" width="30" src="../assets/img/products/product-3-50.png" alt="product" />
+                  oPhone S9 Limited Edition
+                </a>
+              </div>
+              <div class="search-item">
+                <a href="#">
+                  <img class="mr-3 rounded" width="30" src="../assets/img/products/product-2-50.png" alt="product" />
+                  Drone X2 New Gen-7
+                </a>
+              </div>
+              <div class="search-item">
+                <a href="#">
+                  <img class="mr-3 rounded" width="30" src="../assets/img/products/product-1-50.png" alt="product" />
+                  Headphone Blitz
+                </a>
+              </div>
+              <div class="search-header">Projects</div>
+              <div class="search-item">
+                <a href="#">
+                  <div class="search-icon bg-danger text-white mr-3">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  Stisla Admin Template
+                </a>
+              </div>
+              <div class="search-item">
+                <a href="#">
+                  <div class="search-icon bg-primary text-white mr-3">
+                    <i class="fas fa-laptop"></i>
+                  </div>
+                  Create a new Homepage Design
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle">
+            <a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i
+                class="far fa-envelope"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">
+                Messages
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle" />
+                    <div class="is-online"></div>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Kusnaedi</b>
+                    <p>Hello, Bro!</p>
+                    <div class="time">10 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="../assets/img/avatar/avatar-2.png" class="rounded-circle" />
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Dedik Sugiharto</b>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                    </p>
+                    <div class="time">12 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="../assets/img/avatar/avatar-3.png" class="rounded-circle" />
+                    <div class="is-online"></div>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Agung Ardiansyah</b>
+                    <p>
+                      Sunt in culpa qui officia deserunt mollit anim id est
+                      laborum.
+                    </p>
+                    <div class="time">12 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="../assets/img/avatar/avatar-4.png" class="rounded-circle" />
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Ardian Rahardiansyah</b>
+                    <p>
+                      Duis aute irure dolor in reprehenderit in voluptate
+                      velit ess
+                    </p>
+                    <div class="time">16 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="../assets/img/avatar/avatar-5.png" class="rounded-circle" />
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Alfa Zulkarnain</b>
+                    <p>
+                      Exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo
+                    </p>
+                    <div class="time">Yesterday</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown dropdown-list-toggle">
+            <a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i
+                class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">
+                Notifications
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-primary text-white">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Template update is available now!
+                    <div class="time text-primary">2 Min Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="far fa-user"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>You</b> and <b>Dedik Sugiharto</b> are now friends
+                    <div class="time">10 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to
+                    <b>Done</b>
+                    <div class="time">12 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Low disk space. Let's clean it!
+                    <div class="time">17 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Welcome to Stisla template!
+                    <div class="time">Yesterday</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+
+          <ul class="navbar-nav">
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                <img alt="image" src="/images/avatar-1.png" class="rounded-circle mr-1" />
+                <div class="d-sm-none d-lg-inline-block">Hi, test.one!</div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-title">Logged in 5 min ago</div>
+
+                <a class="dropdown-item has-icon" href="/User/User">
+                  <i class="fas fa-user"></i> Profile
+                </a>
+
+                <a class="dropdown-item has-icon" href="/User/ReportStatus">
+                  <i class="fas fa-bolt"></i> Activities
+                </a>
+
+                <a class="dropdown-item has-icon" href="/Setting/UserSetting">
+                  <i class="fas fa-cog"></i>User Settings
+                </a>
+
+                <a class="dropdown-item has-icon" href="/Setting/BaseSetting">
+                  <i class="fas fa-cogs"></i>Base Settings
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <form id="logoutForm" class="form-inline text-danger" action="/Identity/Account/Logout?returnUrl=%2F"
+                  method="post">
+                  <i style="margin-left: 27px" class="fas fa-sign-out-alt"></i>
+                  <button style="margin-left: 0px" id="logout" type="submit" class="nav-link btn btn-link text-danger">
+                    Logout
+                  </button>
+                  <input name="__RequestVerificationToken" type="hidden"
+                    value="CfDJ8A362PdwyA5AsYfdZiAiR-oiCPSMAsM__ECn4ai3FWkuLXBT8UlNfZy6kY_kVi3ZHMEkb9I2ZzmVTkAS9ATKUasWbU0bEhwL7lFEzKyGbd5uJdOfBZk_qWjePBlVoHaFo6bMGszr7hPcPTgOX68uEfckKCW4pDn8ngQwgo2GeiJZfyjvXFVzjAMqctykN2Oi0Q" />
+                </form>
+              </div>
+            </li>
+          </ul>
+        </ul>
+      </nav>
+
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a class="navbar-brand" href="/">LossAssist</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a class="navbar-brand" href="/">
+              <img src="/images/logo.svg" alt="logo" width="40" class="shadow-light rounded-circle" />
+            </a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Menu</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="/">Dashboard</a></li>
+
+                <li>
+                  <a class="nav-link" href="/Vehicle/StatusReport/List">All Projects</a>
+                </li>
+
+                <li>
+                  <a class="nav-link active" href="/Vehicle/Navigation/SelectCase">Create New</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                <i class="ion ion-android-bus"></i> <span>Insurance</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="nav-link active" href="/User/Insurance">Detail</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="ion ion-ios-email"></i>
+                <span>Mail</span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="nav-link" href="/Common/Mail">Inbox</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="/Common/Mail/Compose">Compose</a>
+                </li>
+
+                <li>
+                  <a class="nav-link" href="layout-top-navigation.html">Top Navigation</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link has-dropdown">
+                <i class="ion ion-ios-paper"></i> <span>Memo</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="nav-link" href="/User/Memo?forAll=False">
+                    Personal
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-link" href="/User/Memo?forAll=True">
+                    For All
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link has-dropdown">
+                <i class="ion ion-ios-list-outline"></i> <span>Task</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="nav-link" href="/Common/Task?IsCaseRelated=true">
+                    Project Related
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-link" href="/Common/Task?IsCaseRelated=false">
+                    Others
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-ellipsis-h"></i> <span>Utilities</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="utilities-contact.html">Contact</a></li>
+                <li>
+                  <a class="nav-link" href="utilities-invoice.html">Invoice</a>
+                </li>
+                <li><a href="utilities-subscribe.html">Subscribe</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a>
+            </li>
+          </ul>
+
+          <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+            <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
+              <i class="fas fa-rocket"></i> Documentation
+            </a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="preloader" style="display: none">
+        <l-helix size="70" speed="2.5" color="blue" class="preload-logo draw"></l-helix>
+      </div>
+
+      <!-- Main Content -->
+      <div b-eh7gjq0slz class="main-content">
+        <section b-eh7gjq0slz class="section">
+          <div b-eh7gjq0slz class="section-header">
+            <h1 b-eh7gjq0slz>Task</h1>
+            <div b-eh7gjq0slz class="section-header-breadcrumb">
+              <div b-eh7gjq0slz class="breadcrumb-item active">
+                <a b-eh7gjq0slz href="#">Dashboard</a>
+              </div>
+              <div b-eh7gjq0slz class="breadcrumb-item">
+                <a b-eh7gjq0slz href="#">Components</a>
+              </div>
+              <div b-eh7gjq0slz class="breadcrumb-item">Task</div>
+            </div>
+          </div>
+          <div b-eh7gjq0slz class="section-body">
+            <h2 class="section-title">Task</h2>
+            <p class="section-lead">Organize. Prioritize. Achieve</p>
+
+            <div class="button" style="margin-top: -55px; margin-left: 240px">
+              <a type="button" class="btn btn-primary" onclick="fetchTaskForm(event)" id="createButton"
+                href="/Common/Task/GetById?CaseRecordId=0">Create</a>
+            </div>
+            <hr />
+
+            <input hidden type="number" data-val="true" data-val-required="The CaseRecordId field is required."
+              id="CaseRecordId" name="CaseRecordId" value="0" /><input name="__Invariant" type="hidden"
+              value="CaseRecordId" />
+            <div class="card p-4 m-2">
+              <div class="col-12 row" style="display: flex; justify-content: center">
+                <div class="col-3">
+                  <label for="Profile">Tasks Type</label>
+                  <select class="form-control selectric" id="IsCaseRelated" name="IsCaseRelated">
+                    <option value="null">All</option>
+                    <option value="True">Project Related</option>
+                    <option value="False" selected="selected">Others</option>
+                  </select>
+                </div>
+
+                <div class="col-3">
+                  <label for="Profile">Completion Status</label>
+                  <select class="form-control selectric" id="IsCompleted" name="IsCompleted">
+                    <option value="null">All</option>
+                    <option value="True">Completed</option>
+                    <option value="False">Incomplete</option>
+                  </select>
+                </div>
+
+                <div class="col-4">
+                  <label>
+                    Date Range Picker
+                    <span data-toggle="tooltip" data-placement="top"
+                      title="The date ranges are calculated based on the created date.">
+                      <i class="fas fa-info-circle"></i>
+                    </span>
+                  </label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text daterange-btn">
+                        <i class="fas fa-calendar"></i>
+                      </div>
+                    </div>
+                    <input class="form-control daterange-cus" value="March 6, 2025 - April 4, 2025" disabled type="text"
+                      id="Date" name="Date" />
+                  </div>
+                </div>
+
+                <div class="col-1" style="margin-top: 32px">
+                  <button class="btn btn-primary" id="btnFilter">
+                    Filter
+                  </button>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div id="TaskList">
+              <div class="row" id="tabData">
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 tabDataItem" id="tabDataItem_13">
+                  <article class="article article-style-b">
+
+                    <div class="article-details">
+
+                      <div style="color: black;">
+                        <a>songgum</a> &nbsp;&nbsp;•&nbsp;&nbsp;
+                        <p style="display: inline; font-size: 12px;">Mar 15</p>
+                      </div>
+
+                      <div class="article-title">
+                        <h2>
+                          <a href="#">
+                            fsdffs fnj
+                          </a>
+                        </h2>
+                      </div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies mi ut mauris placerat
+                        semper nec eget nulla. Donec tristique pulvinar magna, in ullamcorper urna ornare ut. Nam ac
+                        quam vel est efficitur placerat. Suspendisse potenti. In hac habitasse platea dictumst. Sed
+                        aliquam dignissim sapien, eu laoreet tortor porta a. Suspendisse volutpat tortor ac velit ornare
+                        viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                      </p>
+
+
+                      <div class="article-cta"
+                        style="display: flex; align-items: center; justify-content: space-between;">
+                        <div style="white-space: nowrap;">
+                          <div class="article-cta-subtask" data-toggle="tooltip" data-placement="top"
+                            title="InComplete SubTasks">
+                            1
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"
+                              fill="orange">
+                              <path
+                                d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-84 31-156.5T196-764l284 284v-400q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+                            </svg>
+                          </div>
+                          <div class="article-cta-subtask" data-toggle="tooltip" data-placement="top"
+                            title="Completed SubTasks">
+                            0
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"
+                              fill="green">
+                              <path
+                                d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z" />
+                            </svg>
+
+                          </div>
+                          <div class="article-cta-subtask" data-toggle="tooltip" data-placement="top"
+                            title="Total SubTasks">
+                            1
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"
+                              fill="blue">
+                              <path
+                                d="M220-260q-92 0-156-64T0-480q0-92 64-156t156-64q37 0 71 13t61 37l68 62-60 54-62-56q-16-14-36-22t-42-8q-58 0-99 41t-41 99q0 58 41 99t99 41q22 0 42-8t36-22l310-280q27-24 61-37t71-13q92 0 156 64t64 156q0 92-64 156t-156 64q-37 0-71-13t-61-37l-68-62 60-54 62 56q16 14 36 22t42 8q58 0 99-41t41-99q0-58-41-99t-99-41q-22 0-42 8t-36 22L352-310q-27 24-61 37t-71 13Z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        <a onclick="fetchTaskForm(event)" style="text-decoration: none; margin-left: 20px;"
+                          href="/Common/Task/GetById/13">
+                          View
+                          <i class="fas fa-chevron-right"></i>
+                        </a>
+                      </div>
+
+
+                    </div>
+
+                  </article>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 tabDataItem" id="tabDataItem_12">
+                  <article class="article article-style-b">
+
+                    <div class="article-details">
+
+                      <div style="color: black;">
+                        <a>songgum</a> &nbsp;&nbsp;•&nbsp;&nbsp;
+                        <p style="display: inline; font-size: 12px;">Mar 15</p>
+                      </div>
+
+                      <div class="article-title">
+                        <h2>
+                          <a href="#">
+                            dajsndj
+                          </a>
+                        </h2>
+                      </div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies mi ut mauris placerat semper nec eget nulla.
+                        Donec tristique pulvinar magna, in ullamcorper urna ornare ut. Nam ac quam vel est efficitur placerat. Suspendisse
+                        potenti. In hac habitasse platea dictumst. Sed aliquam dignissim sapien, eu laoreet tortor porta a. Suspendisse volutpat
+                        tortor ac velit ornare viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                      </p>
+
+
+                      <div class="article-cta"
+                        style="display: flex; align-items: center; justify-content: space-between;">
+                        <div style="white-space: nowrap;">
+                          <div class="article-cta-subtask" data-toggle="tooltip" data-placement="top"
+                            title="InComplete SubTasks">
+                            1
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"
+                              fill="orange">
+                              <path
+                                d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-84 31-156.5T196-764l284 284v-400q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+                            </svg>
+                          </div>
+                          <div class="article-cta-subtask" data-toggle="tooltip" data-placement="top"
+                            title="Completed SubTasks">
+                            0
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"
+                              fill="green">
+                              <path
+                                d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z" />
+                            </svg>
+
+                          </div>
+                          <div class="article-cta-subtask" data-toggle="tooltip" data-placement="top"
+                            title="Total SubTasks">
+                            1
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"
+                              fill="blue">
+                              <path
+                                d="M220-260q-92 0-156-64T0-480q0-92 64-156t156-64q37 0 71 13t61 37l68 62-60 54-62-56q-16-14-36-22t-42-8q-58 0-99 41t-41 99q0 58 41 99t99 41q22 0 42-8t36-22l310-280q27-24 61-37t71-13q92 0 156 64t64 156q0 92-64 156t-156 64q-37 0-71-13t-61-37l-68-62 60-54 62 56q16 14 36 22t42 8q58 0 99-41t41-99q0-58-41-99t-99-41q-22 0-42 8t-36 22L352-310q-27 24-61 37t-71 13Z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        <a onclick="fetchTaskForm(event)" style="text-decoration: none; margin-left: 20px;"
+                          href="/Common/Task/GetById/12">
+                          View
+                          <i class="fas fa-chevron-right"></i>
+                        </a>
+                      </div>
+
+
+                    </div>
+
+                  </article>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 tabDataItem" id="tabDataItem_11">
+                  <article class="article article-style-b">
+
+                    <div class="article-details">
+
+                      <div style="color: black;">
+                        <a>songgum</a> &nbsp;&nbsp;•&nbsp;&nbsp;
+                        <p style="display: inline; font-size: 12px;">Mar 15</p>
+                      </div>
+
+                      <div class="article-title">
+                        <h2>
+                          <a href="#">
+                            dasjdajs
+                          </a>
+                        </h2>
+                      </div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies mi ut mauris placerat
+                        semper nec eget nulla. Donec tristique pulvinar magna, in ullamcorper urna ornare ut. Nam ac
+                        quam vel est efficitur placerat. Suspendisse potenti. In hac habitasse platea dictumst. Sed
+                        aliquam dignissim sapien, eu laoreet tortor porta a. Suspendisse volutpat tortor ac velit ornare
+                        viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                      </p>
+
+
+                      <div class="article-cta"
+                        style="display: flex; align-items: center; justify-content: space-between;">
+                        <div style="white-space: nowrap;">
+                          <div class="article-cta-subtask" data-toggle="tooltip" data-placement="top"
+                            title="InComplete SubTasks">
+                            2
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"
+                              fill="orange">
+                              <path
+                                d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-84 31-156.5T196-764l284 284v-400q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+                            </svg>
+                          </div>
+                          <div class="article-cta-subtask" data-toggle="tooltip" data-placement="top"
+                            title="Completed SubTasks">
+                            0
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"
+                              fill="green">
+                              <path
+                                d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z" />
+                            </svg>
+
+                          </div>
+                          <div class="article-cta-subtask" data-toggle="tooltip" data-placement="top"
+                            title="Total SubTasks">
+                            2
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px"
+                              fill="blue">
+                              <path
+                                d="M220-260q-92 0-156-64T0-480q0-92 64-156t156-64q37 0 71 13t61 37l68 62-60 54-62-56q-16-14-36-22t-42-8q-58 0-99 41t-41 99q0 58 41 99t99 41q22 0 42-8t36-22l310-280q27-24 61-37t71-13q92 0 156 64t64 156q0 92-64 156t-156 64q-37 0-71-13t-61-37l-68-62 60-54 62 56q16 14 36 22t42 8q58 0 99-41t41-99q0-58-41-99t-99-41q-22 0-42 8t-36 22L352-310q-27 24-61 37t-71 13Z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        <a onclick="fetchTaskForm(event)" style="text-decoration: none; margin-left: 20px;"
+                          href="/Common/Task/GetById/11">
+                          View
+                          <i class="fas fa-chevron-right"></i>
+                        </a>
+                      </div>
+
+
+                    </div>
+
+                  </article>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          &copy; 2025 - LossAssist -
+          <a href="/Vehicle/Home/Privacy">Privacy</a>
+        </div>
+        <div class="footer-right">0.0.0</div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/sistla.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/sweetalert.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.js"
+    integrity="sha512-OmBbzhZ6lgh87tQFDVBHtwfi6MS9raGmNvUNTjDIBb/cgv707v9OuBVpsN6tVVTLOehRFns+o14Nd0/If0lE/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/sparkline.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/owlcarousel.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/chocolet.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/selectric.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/select2.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/datatable.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/datatablesbootstrap.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/Songgumdhk/CDN@main/lossassist/js/sistila/datatableswrapper.js"></script>
+
+  <script src="/lib/nepalidate/js/nepali.datepicker.v4.0.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+  <script src="/js/englishdate.js"></script>
+
+  <script src="/js/nepalinumber2word.js"></script>
+
+  <script src="/js/commonjs.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.1/daterangepicker.js"
+    integrity="sha512-nAyaaTbZ7BpQ9HbWB6ZFPav14ekIZ/E1gHU8UC5q3FolFGzCPtFD0Er6VG5otVoWJtVGTenKUGufRjOkrLTyug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.7.1/bootstrap-tagsinput.min.js"
+    integrity="sha512-hgirkqzf8lxGH530mx+qBLydg3sX7hwUaZ4Bz7HDgo6zN0K3zjNRCynPjeMytE2WkAr9Iq7zHoQyf/C7NMw3Lw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/helix.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("a[loader], button[loader]").click(() => showLoader());
+      window.addEventListener("pageshow", (e) => e.persisted && hideLoader());
+    });
+  </script>
+
+  <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+  <script src="/js/areas/common/task/task.js"></script>
+</body>
+
+</html>

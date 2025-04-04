@@ -1,0 +1,16 @@
+.article-cta-subtask {
+  display: inline-block;
+  margin-right: 10px;
+
+  svg {
+    margin-top: -3px;
+  }
+}
+
+.article-details p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}

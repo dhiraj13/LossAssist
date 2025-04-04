@@ -1,4 +1,5 @@
 .scrollable-container {
+  scroll-behavior: smooth;
   max-height: 180px;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -29,5 +30,35 @@
   .scrollable-container {
     scrollbar-color: #e0e0e0 transparent;
     scrollbar-width: thin;
+  }
+}
+
+.ticket-info-text {
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  max-height: calc(2 * 1.5em);
+  /* flex: 1; */
+}
+
+.ticket-info-date {
+  white-space: nowrap;
+}
+
+.ticket-item-task {
+  display: flex;
+  align-items: center;
+  color: #6c757d;
+  margin-top: .6rem;
+  gap: .8rem;
+
+  .task-status {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
   }
 }
